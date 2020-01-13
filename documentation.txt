@@ -1,0 +1,70 @@
+# EXAMPLE OF APP ROUTE @app.route('/result', methods=['post', 'get'])
+start server  flask run -h 192.168.0.104
+my host  http://192.168.0.104:5000
+
+this is request example :  b'{"status":"waiting","name":"kot\\n","move_turn":false,"reply":"loss","x":-1,"y":-1}'
+always check my ip adress!
+# player_inform = {"player_name": request.json["player_name"], "player_uuid": player_uuid}
+# res.set_cookie('uuid', request.json['player_name'], max_age=60)
+
+request_inform :
+{
+  status: "RUN",
+  name: "Inokentij",
+  move_turn: true,
+  reply: "hit",
+  x:" " ,
+  y:" "
+}
+# player_ip = request.remote_addr
+
+# EXAMPLE OF RESPONSE!
+# data = {
+#     'status': 'START',
+#     'name': 'Inokentij',
+#     'move_turn': 'true',
+#     "reply": "",
+#     "x": " 1",
+#     "y": "2 "
+# }
+resp.body = request_dict - make a response correctly
+
+to make yarn build do : yarn build-dev at directory seabattle_rewrite. Then put index.html file in backend templates and
+app.js in static folder.
+
+app = Flask(__name__, static_folder='static/')
+
+
+resp = make_response(jsonify(data), 200) # put your "data" type dict in response
+resp.set_cookie('player_inform', player_uuid, max_age=60 * 60 * 60) # after you can set a cookie
+
+    if len(waiting_players) == 2:
+
+        i = 1
+        lobby_number = str(len(GAME_LOBBIES) + 1).zfill(15)
+        for player in waiting_players:
+            player = player
+            player_id = 'player_' + str(i)
+            game_pair_json[player_id] = player
+            i = i + 1
+
+        json.loads('"{}"'.format(game_pair_json))
+        GAME_LOBBIES[lobby_number] = game_pair_json
+        waiting_players.clear()
+        game_pair_json.clear()
+
+        resp = request_dict
+        return "returns nothing"
+
+
+waiting status
+
+27.11.2019
+types of request
+
+THIS IS REQUEST DICT :  {'status': 'RUN', 'name': 'kisa', 'move_turn': False, 'reply': ''}
+127.0.0.1 - - [27/Nov/2019 12:23:24] "POST / HTTP/1.1" 200 -
+THIS IS REQUEST DICT :  {'status': 'RUN', 'name': 'lola', 'move_turn': True, 'reply': '', 'x': '', 'y': ''}
+
+        # making a cookie ONLY for a new player
+        # all player inform should be in variable data
