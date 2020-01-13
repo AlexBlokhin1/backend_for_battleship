@@ -16,6 +16,19 @@ true_false_list = [True, False]
 
 def find_players():
     # todo please shortly describe algorithm of this function HERE
+    """
+    THIS IS FUNCTION FOR FINDING PLAYERS
+
+    STEP 1 - CHECK IF PLAYER HAVE OUR COOKIE
+        if player has a cookie he is in waiting pair OR playing.
+    STEP 2 - IF HE HAS A COOKIE AND WAITING FOR THE GAME
+        player will wait until another player would come.
+    STEP 3 - HE IS IN THE GAME AND PLAYING
+        they should exchange shot coordinates but i cannot have them.
+
+    PROBLEMS: PLAYERS CAN FIND EACH OTHER BUT CANNOT GIVE COORDINATES OF THE SHOT
+    DONT KNOW HOW TO SOLVE THIS.
+    """
 
     request_dict = request.json or {}
     cookie = request.cookies
